@@ -52,8 +52,14 @@ nav img {
   /* Basic CSS for the form elements */
   body {
     font-family: Arial, sans-serif;
-    background-color: rgb(200, 144, 200);
-    background-image: linear-gradient("./background_img.webp");
+    /*background-color: rgb(200, 144, 200);*/
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1.0)),
+        url("./background_img.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     /*background-image: "./background_img.webp";*/
     /* margin: 20px; */
   }
