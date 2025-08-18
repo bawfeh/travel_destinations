@@ -17,16 +17,11 @@
         <li><a href="./contact_us.html" id="contact">Contact Us </a></li>
         </ul>
     </div>
-    <div class="btnSearchClear">
-        <ul>
-        <li><input type="text" id="conditionInput" placeholder="Enter your preferred destination"></li>
-        <li><button id='btnSearch'>Search</button></li>
-        <li><button id='btnClear'>Clear</button></li>
-        </ul>
+    <div>
     </div>
 </nav>
-<div class="container">
-<div class="sidebar">
+<div class="container" id="contact-container">
+<div class="sidebar" id="contact-sidebar">
     <div id="socialhandles">
         <a href="https://twitter.com" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" 
@@ -46,24 +41,23 @@
           </a>
     </div>
 </div>
-<div class="maincontent">
-    <div class="title_content" id="titlebox">
-    <h1>Explore Your Dream Destination</h1>
+<div class="maincontent" id="contact-maincontent">
+    <div class="contact-title">
+    <h1>CONTACT US</h1>
+    <p>Get in touch by filling the form. 
+        We will get back to you within 2 business days. </p>
     </div>
-    <div class="introduction" id="introbox">
-        <h2>Welcome to BIHUB Travel</h2> 
-        <p> If you ever wonder how to plan an exciting vacation or tourism travel, 
-        you're just at the right place, at the right time.<br><br></p>
-    <p>We provide useful tourist guide on some the most fascination travel destinations.
-Our services range from selecting the best destinations that meet your expectations and planning advisory.
-To get started use the <a href="#conditionInput">top right menu</a> to explore useful information on your preferred destinations. 
-Once you're have decided on your trip you can use the button 
-at the bottom to <a href="#addBooking">book your trip</a>. You can always contact us if you need further guidance.<br><br></p>
-<p><i>Wishing you a fantastic travel experience!</i></p>
-    </div>
-    <button id="addBooking">BOOK NOW</button>
-    <div class="searchResult">
-        <div id="result"></div>
+    <div class="contact-form">
+    <form action="/submit" method="post">
+        <label for="name">Name</label><br>
+        <input type="text" name="name" id="name" placeholder="E.g. John Doe" required><br><br>
+        <label for="email">Email</label><br>
+        <input type="text" name="email" id="email" placeholder="E.g. john@doe.com" required><br><br>
+        <label for="message">Message</label><br>
+        <textarea id="comments" name="comments" rows="6" cols="40" placeholder="Write your message here..." required>
+        </textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
     </div>
 </div>
 </div>
