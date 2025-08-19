@@ -55,7 +55,7 @@ nav img {
     color: white;
     background:
         linear-gradient(to left, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.8)),
-        url("./background_img.webp");
+        url("./srcs/images/background_img.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -220,13 +220,13 @@ div {
   display: flex;
   padding: 2%;
   align-items: left;
-  justify-content:baseline;
+  justify-content: space-evenly;
   flex-direction: column;
 }
 #searchResult img{
     width: 100%;
 }
-#searchResult p {
+/*#searchResult p {
     padding: 1%;
-}
+}*/
   

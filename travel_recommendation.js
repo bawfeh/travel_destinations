@@ -55,13 +55,15 @@ function performSearch() {
     }
     function addContent () {
         for (const info of infos) {
+            resultDiv.innerHTML += `<div style = "padding-bottom: 2%">`;
             resultDiv.innerHTML += `<h3>${info.name}</h3>`;
             resultDiv.innerHTML += `<img src="${info.image}" alt="hjh">`;
             resultDiv.innerHTML += `<p>${info.description}</p>`;
+            resultDiv.innerHTML += "</div>";
         }
     }
 
-    fetch('travel_recommendation_api.json')
+    fetch('./srcs/travel_recommendation_api.json')
     .then(response => response.json())
     .then(data => {
         if (keywordFound) {
