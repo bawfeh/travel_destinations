@@ -65,13 +65,14 @@ function performSearch() {
     .then(data => {
         if (keywordFound) {
             const dataObject = data[keyword];
+            console.log(dataObject.cities)
             if (keyword === "countries") {
                 total = 0;
-                for (const country in dataObject) {
-                    total += country['cities'].length;
+                for (const country of dataObject) {
+                    total += country.cities.length;
                 }
-                for (const country in dataObject) {
-                    for (const city in country['cities']) {
+                for (const country of dataObject) {
+                    for (const city of country.cities) {
                         addInfo(city);
                     }
                 }
