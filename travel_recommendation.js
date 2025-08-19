@@ -20,25 +20,33 @@ function argMin (arr) {
 
 function performSearch() {
     const keyword = document.getElementById('destinationInput').value.toLowerCase();
+    if (/countr(?:y|i)/.test(keyword)) {
+            keyword = "countries"; 
+    } else if (/templ/.test(keyword)) {            
+        keyword = "temples"; 
+    } else if (/beach/.test(keyword)) {            
+        keyword = "beaches"; 
+    }
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = '';
-    let probs = [];
+    let scores = [];
     let infos = [];
     let total = 0; // number of info items available
     let maxInfo = 2; // maximum number of info to display
-    let rand_prob = 0;
+    let random_score = 0;
     let i = 0;
     let imin = 0;
 
     function addInfo(key) {
+        random_score = Math.round(Math.random() * total); // score between 0 and total inclusive
         if (i < maxInfo) {
             infos.push({city: key.name, image: key.imageUrl, description: key.description})
-            probs.push(rand_prob);
+            scores.push(random_score);
         } else {
-            imin = argMin(probs);
-            if (rand_prob > probs[imin]) {
+            imin = argMin(scores);
+            if (random_score > scores[imin]) {
                 infos[imin] =  {city: key.name, image: key.imageUrl, description: key.description};
-                probs[imin] = rand_prob;
+                scores[imin] = random_score;
             }
         }
         i++;
@@ -65,25 +73,25 @@ function performSearch() {
             }
             for (const country in countries) {
                 for (const city in country.cities) {
-                    rand_prob = Math.random() / total;
                     addInfo(city);
                 }
             }
             addContent();
+
         } else if (temples) {
             total = temples.length;
             for (const temple of temples) {
-                    rand_prob = Math.random() / total;
-                    addInfo(temple);
-                }
+                addInfo(temple);
+            }
             addContent();
+
         } else if (beaches) {
             total = beaches.length;
             for (const beach of beaches) {
-                    rand_prob = Math.random() / total;
-                    addInfo(beach);
-                }
+                addInfo(beach);
+            }
             addContent();
+
         } else {
             resultDiv.innerHTML = `Condition ${keyword} not found! Acceptable keywords: countries, temples, beaches`;
         }
