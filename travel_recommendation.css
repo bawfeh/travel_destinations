@@ -218,15 +218,15 @@ div {
 .searchResult{
   width: 40%;
   display: flex;
-  padding: 1%;
-  align-items: center;
-  justify-content: left;
+  padding: 2%;
+  align-items: left;
+  justify-content:baseline;
   flex-direction: column;
 }
 #searchResult img{
     width: 100%;
 }
-#searchResult p{
+#searchResult p {
     padding: 1%;
 }
   

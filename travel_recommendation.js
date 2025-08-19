@@ -1,10 +1,11 @@
 const btnSearch = document.getElementById('btnSearch');
 const btnClear = document.getElementById('btnClear');
+const resultDiv = document.getElementById('result');
 
-function clearSearch() {
-    document.getElementById('btnClear') = "";
+function clearContent() {
+    document.getElementById('destinationInput').value = "";
+    document.getElementById('result').innerHTML = "";
 }
-btnClear.addEventListener("click", clearSearch);
 
 function argMin (arr) {
     let minIndex = 0;
@@ -27,7 +28,7 @@ function performSearch() {
     } else if (/beach/.test(keyword)) {            
         keyword = "beaches"; 
     }
-    const resultDiv = document.getElementById('result');
+    // const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = '';
     let scores = [];
     let infos = [];
@@ -101,4 +102,5 @@ function performSearch() {
         resultDiv.innerHTML = 'An error occurred while fetching data.';
     });
 }
+btnClear.addEventListener('click', clearContent);
 btnSearch.addEventListener('click', performSearch);
