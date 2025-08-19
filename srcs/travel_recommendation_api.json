@@ -108,7 +108,7 @@
 
         "name": "Angkor Wat, Cambodia",
 
-        "imageUrl": "enter_your_image_for_angkor-wat.jpg",
+        "imageUrl": "./srcs/images/temples/angkor-wat.jpg",
 
         "description": "A UNESCO World Heritage site and the largest religious monument in the world."
 
@@ -120,7 +120,7 @@
 
         "name": "Taj Mahal, India",
 
-        "imageUrl": "enter_your_image_for_taj-mahal.jpg",
+        "imageUrl": "./srcs/images/temples/taj-mahal.jpg",
 
         "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
 
@@ -136,7 +136,7 @@
 
         "name": "Bora Bora, French Polynesia",
 
-        "imageUrl": "enter_your_image_for_bora-bora.jpg",
+        "imageUrl": "./srcs/images/beaches/bora-bora.jpg",
 
         "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
 
@@ -148,7 +148,7 @@
 
         "name": "Copacabana Beach, Brazil",
 
-        "imageUrl": "enter_your_image_for_copacabana.jpg",
+        "imageUrl": "./srcs/images/beaches/copacabana.jpg",
 
         "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
 
