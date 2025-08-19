@@ -20,7 +20,7 @@ function argMin (arr) {
 }
 
 function performSearch() {
-    var keyword = document.getElementById('destinationInput').value.toLowerCase();
+    let keyword = document.getElementById('destinationInput').value.toLowerCase();
     if (/countr(?:y|i)/.test(keyword)) {
             keyword = "countries"; 
     } else if (/templ/.test(keyword)) {            
@@ -28,7 +28,8 @@ function performSearch() {
     } else if (/beach/.test(keyword)) {            
         keyword = "beaches"; 
     }
-    const keywordFound = ["countries", "temples", "beaches"].find(item => item === keyword);
+    const keywordFound = ["countries", "temples", "beaches"]
+                        .find(item => item === keyword);
     resultDiv.innerHTML = '';
     let scores = [];
     let infos = [];
@@ -54,8 +55,8 @@ function performSearch() {
     }
     function addContent () {
         for (const info of infos) {
-            resultDiv.innerHTML += `<img src="${info.image}" alt="hjh">`;
             resultDiv.innerHTML += `<h3>${info.name}</h3>`;
+            resultDiv.innerHTML += `<img src="${info.image}" alt="hjh">`;
             resultDiv.innerHTML += `<p>${info.description}</p>`;
         }
     }
@@ -65,7 +66,6 @@ function performSearch() {
     .then(data => {
         if (keywordFound) {
             const dataObject = data[keyword];
-            console.log(dataObject.cities)
             if (keyword === "countries") {
                 total = 0;
                 for (const country of dataObject) {
