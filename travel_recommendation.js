@@ -20,7 +20,7 @@ function argMin (arr) {
 }
 
 function performSearch() {
-    const keyword = document.getElementById('destinationInput').value.toLowerCase();
+    var keyword = document.getElementById('destinationInput').value.toLowerCase();
     if (/countr(?:y|i)/.test(keyword)) {
             keyword = "countries"; 
     } else if (/templ/.test(keyword)) {            
@@ -28,7 +28,7 @@ function performSearch() {
     } else if (/beach/.test(keyword)) {            
         keyword = "beaches"; 
     }
-    // const resultDiv = document.getElementById('result');
+    const keywordFound = ["countries", "temples", "beaches"].find(item => item === keyword);
     resultDiv.innerHTML = '';
     let scores = [];
     let infos = [];
@@ -41,12 +41,12 @@ function performSearch() {
     function addInfo(key) {
         random_score = Math.round(Math.random() * total); // score between 0 and total inclusive
         if (i < maxInfo) {
-            infos.push({city: key.name, image: key.imageUrl, description: key.description})
+            infos.push({name: key.name, image: key.imageUrl, description: key.description})
             scores.push(random_score);
         } else {
             imin = argMin(scores);
             if (random_score > scores[imin]) {
-                infos[imin] =  {city: key.name, image: key.imageUrl, description: key.description};
+                infos[imin] =  {name: key.name, image: key.imageUrl, description: key.description};
                 scores[imin] = random_score;
             }
         }
@@ -54,8 +54,8 @@ function performSearch() {
     }
     function addContent () {
         for (const info of infos) {
-            resultDiv.innerHTML += `<h2>${info.city}</h2>`;
             resultDiv.innerHTML += `<img src="${info.image}" alt="hjh">`;
+            resultDiv.innerHTML += `<h3>${info.name}</h3>`;
             resultDiv.innerHTML += `<p>${info.description}</p>`;
         }
     }
@@ -63,33 +63,23 @@ function performSearch() {
     fetch('travel_recommendation_api.json')
     .then(response => response.json())
     .then(data => {
-        const countries = data.countries.find(item => item.name.toLowerCase() === keyword);
-        const temples = data.temples.find(item => item.name.toLowerCase() === keyword);
-        const beaches = data.beaches.find(item => item.name.toLowerCase() === keyword);
-
-        if (countries) {
-            total = 0;
-            for (const country in countries) {
-                total += country.cities.length;
-            }
-            for (const country in countries) {
-                for (const city in country.cities) {
-                    addInfo(city);
+        if (keywordFound) {
+            const dataObject = data[keyword];
+            if (keyword === "countries") {
+                total = 0;
+                for (const country in dataObject) {
+                    total += country['cities'].length;
                 }
-            }
-            addContent();
-
-        } else if (temples) {
-            total = temples.length;
-            for (const temple of temples) {
-                addInfo(temple);
-            }
-            addContent();
-
-        } else if (beaches) {
-            total = beaches.length;
-            for (const beach of beaches) {
-                addInfo(beach);
+                for (const country in dataObject) {
+                    for (const city in country['cities']) {
+                        addInfo(city);
+                    }
+                }
+            } else {
+                total = dataObject.length;
+                for (const obj of dataObject) {
+                    addInfo(obj);
+                }
             }
             addContent();
 
