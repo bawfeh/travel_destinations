@@ -19,53 +19,58 @@
     </div>
     <div class="btnSearchClear">
         <ul>
-        <li><input type="text" id="destinationInput" placeholder="Enter your preferred destination"></li>
+        <li><input type="text" id="destinationInput" placeholder="Keyword: beach, temple, country"></li>
         <li><button id='btnSearch'>Search</button></li>
         <li><button id='btnClear'>Clear</button></li>
         </ul>
     </div>
 </nav>
 <div class="container">
-<div class="sidebar">
-    <div id="socialhandles">
-        <a href="https://twitter.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" 
-                 alt="Twitter">
-          </a>
-        <a href="https://facebook.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" 
-                 alt="Facebook">
-          </a>
-          <a href="https://instagram.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" 
-                 alt="Instagram">
-          </a>
-          <a href="https://youtube.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" 
-                 alt="YouTube">
-          </a>
+    <div class="sidebar">
+        <div id="socialhandles">
+            <a href="https://twitter.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" 
+                    alt="Twitter">
+            </a>
+            <a href="https://facebook.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" 
+                    alt="Facebook">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" 
+                    alt="Instagram">
+            </a>
+            <a href="https://youtube.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" 
+                    alt="YouTube">
+            </a>
+        </div>
     </div>
-</div>
-<div class="maincontent">
-    <div class="title_content" id="titlebox">
-    <h1>Explore Your Dream Destination</h1>
+    <div class="maincontent" id="home-content">
+        <!--<div class="intro-column">-->
+        <div class="title_content" id="titlebox">
+            <h1>Explore Your Dream Destination</h1>
+        </div>
+        <div class="introduction" id="introbox">
+            <h2>Welcome to BIHUB Travel</h2> 
+            <p> If you ever wonder how to plan an exciting vacation or tourism travel, 
+            you're just at the right place, at the right time.<br><br></p>
+            <p>We provide useful tourist guide on some the most fascination travel destinations.
+            Our services range from selecting the best destinations that meet your expectations and planning advisory.
+            To get started use the <a href="#conditionInput">top right menu</a> to explore useful information on your preferred destinations. 
+            Once you're have decided on your trip you can use the button 
+            at the bottom to <a href="#addBooking">book your trip</a>. You can always contact us if you need further guidance.<br><br></p>
+            <p><i>Wishing you a fantastic travel experience!</i></p>
+        </div>
+        <button id="addBooking">BOOK NOW</button>
+    <!--</div>-->
     </div>
-    <div class="introduction" id="introbox">
-        <h2>Welcome to BIHUB Travel</h2> 
-        <p> If you ever wonder how to plan an exciting vacation or tourism travel, 
-        you're just at the right place, at the right time.<br><br></p>
-    <p>We provide useful tourist guide on some the most fascination travel destinations.
-Our services range from selecting the best destinations that meet your expectations and planning advisory.
-To get started use the <a href="#conditionInput">top right menu</a> to explore useful information on your preferred destinations. 
-Once you're have decided on your trip you can use the button 
-at the bottom to <a href="#addBooking">book your trip</a>. You can always contact us if you need further guidance.<br><br></p>
-<p><i>Wishing you a fantastic travel experience!</i></p>
-    </div>
-    <button id="addBooking">BOOK NOW</button>
     <div class="searchResult">
-        <div id="result"></div>
+        <div id="result">
+            <h2> Search results </h2>
+            <p>This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph! This is a paragraph!</p>
+        </div>
     </div>
-</div>
 </div>
 <script src="./travel_recommendation.js"></script>
 </body>

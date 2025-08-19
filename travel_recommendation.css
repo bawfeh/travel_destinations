@@ -52,6 +52,7 @@ nav img {
   /* Basic CSS for the form elements */
   body {
     font-family: Arial, sans-serif;
+    color: white;
     background:
         linear-gradient(to left, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.8)),
         url("./background_img.webp");
@@ -62,30 +63,30 @@ nav img {
     /* margin: 20px; */
   }
 
+/* Basic CSS for the container content */
 .container {
     display: flex;
     margin-top: 1%;
 }
-.maincontent {
-    padding: 1%;
-}
 #contact-container {
     padding-left: 10px;
 }
+
+
+/* Basic CSS for the vertical sidebars */
 .sidebar {
     display: flex;
-    width: 8%;
-    color: white;
+    width: 5%;
     align-items: right;
     justify-content: center;
 }
-#about-sidebar {
-    width: 10%;
+/*#about-sidebar {
+    width: 5%;
 }
 #contact-sidebar {
     width: 4%;
     margin-top: 1%;
-}
+}*/
 .sidebar img {
     width: 90%;
     padding-right: 5px
@@ -94,13 +95,28 @@ nav img {
     border-right: 1pt solid;
     padding-right: 5px;
 }
+
+
+
+/* Basic CSS for divisions of the main contents */
+.maincontent {
+    padding: 1%;
+}
+#home-content {
+    width: 50%;
+    /*display: flex;*/
+    padding: 1%;
+}
+#about-content {
+    width: 100%;
+}
+#contact-content {
+    width: 80%;
+    margin-left: 10px;
+}
   
-/*.title_content{
-    width: 100px;
-}*/
 h1 {
     font-variant: small-caps;
-    color: white;
     width: 300px;
     margin-bottom: 20px;
     margin-top: 50px;
@@ -108,31 +124,17 @@ h1 {
     border-width: 2px;
     border-color: red;*/
 }
+#contact-content h1, 
+.ourTeam h1 {
+    margin-top: auto;
+}
 
   
 div {
     margin-bottom: 10px;
   }
 
-.introduction {
-    color: white;
-    width: 50%;
-    /*padding: 1%;*/
-    margin-bottom: 20px;
-    /*border-style: solid;
-    border-width: 2px;
-    border-color: red;
-    border-radius: 20px;*/
-}
-#about-intro {
-    width: 80%;
-}
-#contact-maincontent {
-    width: 80%;
-    margin-left: 10px;
-}
-.ourTeam, #contact-maincontent {
-    color: white;
+.ourTeam, #contact-content {
     padding: 5px;
     display: flex;
     align-items: top;
@@ -184,13 +186,7 @@ div {
       padding-left: 2%;
   }
   
-  /*input[type="text"],
-  input[type="number"],
-  select {
-    width: 200px;
-    padding: 5px;
-  }*/
-  
+
   button {
     padding: 7px 15px;
     background-color: #4CAF50;
@@ -210,16 +206,6 @@ div {
     margin-right: 0;
   }
   
-  /* Basic CSS for the report section */
-  h2 {
-    margin-top: 30px;
-  }
-
-#contact-maincontent h1, 
-.ourTeam h1 {
-    margin-top: auto;
-}
-
 .contact-form input, 
 .contact-form textarea, 
 .contact-form button {
@@ -229,21 +215,18 @@ div {
     width: 30%;
 }
   
-#report,#result {
-    padding: 10px;
-    max-width: 400px;
-    word-wrap: break-word;
-  }
-#result{
-  height: 400px;
-  width: 500px;
+.searchResult{
+  width: 40%;
   display: flex;
+  padding: 1%;
   align-items: center;
-  justify-content: space-around;
+  justify-content: left;
   flex-direction: column;
 }
-#result img{
-    width: 200px;
-    height: 100px;
+#searchResult img{
+    width: 100%;
+}
+#searchResult p{
+    padding: 1%;
 }
   

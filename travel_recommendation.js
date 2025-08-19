@@ -93,7 +93,7 @@ function performSearch() {
             addContent();
 
         } else {
-            resultDiv.innerHTML = `Condition ${keyword} not found! Acceptable keywords: countries, temples, beaches`;
+            resultDiv.innerHTML = `Condition ${keyword} not found! Acceptable keywords: beach, temple, country`;
         }
         })
     .catch(error => {
