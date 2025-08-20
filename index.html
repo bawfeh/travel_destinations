@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>BIHUB Travel</title>
-  <link rel="stylesheet" href="./travel_recommendation.css">
+  <link rel="stylesheet" href="./srcs/travel_recommendation.css">
 </head>
 <body>
 <nav>
     <div class="logo">
-        <img src="./srcs/images/travel_logo.jpg"> <i>BIHUB<br>Travel</i>
+        <img src="./images/travel_logo.jpg"> <i>BIHUB<br>Travel</i>
     </div>
     <div class="externalpages">
         <ul>
@@ -58,13 +58,14 @@
             Our services range from selecting the best destinations that meet your expectations and planning advisory.
             To get started use the <a href="#destinationInput">top right menu</a> to explore useful information on your preferred destinations. 
             Once you're have decided on your trip you can use the button 
-            at the bottom to <a href="#addBooking">book your trip</a>. You can always contact us if you need further guidance.<br><br></p>
+            at the bottom to <a href="#addBooking" onclick="addBooking()">book your trip</a>. You can always contact us if you need further guidance.<br><br></p>
             <p><i>Wishing you a fantastic travel experience!</i></p>
         </div>
-        <button id="addBooking">BOOK NOW</button>
+        <button id="addBooking" onclick="addBooking()">
+            BOOK NOW</button>
     </div>
     <div class="searchResult" id="result"></div></div>
-<script src="./travel_recommendation.js">
+<script src="./srcs/travel_recommendation.js">
 </script>
 </body>
 </html>

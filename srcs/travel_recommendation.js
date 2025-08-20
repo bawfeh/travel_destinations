@@ -2,6 +2,10 @@ const btnSearch = document.getElementById('btnSearch');
 const btnClear = document.getElementById('btnClear');
 const resultDiv = document.getElementById('result');
 
+function addBooking () {
+    window.location.href="./contact_us.html";
+}
+
 function clearContent() {
     document.getElementById('destinationInput').value = "";
     document.getElementById('result').innerHTML = "";
@@ -55,7 +59,7 @@ function performSearch() {
     }
     function addContent () {
         for (const info of infos) {
-            resultDiv.innerHTML += `<div style = "padding-bottom: 2%">`;
+            resultDiv.innerHTML += `<div>`;
             resultDiv.innerHTML += `<h3>${info.name}</h3>`;
             resultDiv.innerHTML += `<img src="${info.image}" alt="hjh">`;
             resultDiv.innerHTML += `<p>${info.description}</p>`;

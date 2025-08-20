@@ -14,7 +14,7 @@
 
             "name": "Sydney, Australia",
 
-            "imageUrl": "./srcs/images/countries/sydney.jpg",
+            "imageUrl": "./images/countries/sydney.jpg",
 
             "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
 
@@ -24,7 +24,7 @@
 
             "name": "Melbourne, Australia",
 
-            "imageUrl": "./srcs/images/countries/melbourne.jpg",
+            "imageUrl": "./images/countries/melbourne.jpg",
 
             "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
 
@@ -46,7 +46,7 @@
 
             "name": "Tokyo, Japan",
 
-            "imageUrl": "./srcs/images/countries/tokyo.jpg",
+            "imageUrl": "./images/countries/tokyo.jpg",
 
             "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
 
@@ -56,7 +56,7 @@
 
             "name": "Kyoto, Japan",
 
-            "imageUrl": "./srcs/images/countries/kyoto.jpg",
+            "imageUrl": "./images/countries/kyoto.jpg",
 
             "description": "Known for its historic temples, gardens, and traditional tea houses."
 
@@ -78,7 +78,7 @@
 
             "name": "Rio de Janeiro, Brazil",
 
-            "imageUrl": "./srcs/images/countries/rio.jpg",
+            "imageUrl": "./images/countries/rio.jpg",
 
             "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
 
@@ -88,7 +88,7 @@
 
             "name": "São Paulo, Brazil",
 
-            "imageUrl": "./srcs/images/countries/sao-paulo.jpg",
+            "imageUrl": "./images/countries/sao-paulo.jpg",
 
             "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
 
@@ -108,7 +108,7 @@
 
         "name": "Angkor Wat, Cambodia",
 
-        "imageUrl": "./srcs/images/temples/angkor-wat.jpg",
+        "imageUrl": "./images/temples/angkor-wat.jpg",
 
         "description": "A UNESCO World Heritage site and the largest religious monument in the world."
 
@@ -120,7 +120,7 @@
 
         "name": "Taj Mahal, India",
 
-        "imageUrl": "./srcs/images/temples/taj-mahal.jpg",
+        "imageUrl": "./images/temples/taj-mahal.jpg",
 
         "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
 
@@ -136,7 +136,7 @@
 
         "name": "Bora Bora, French Polynesia",
 
-        "imageUrl": "./srcs/images/beaches/bora-bora.jpg",
+        "imageUrl": "./images/beaches/bora-bora.jpg",
 
         "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
 
@@ -148,7 +148,7 @@
 
         "name": "Copacabana Beach, Brazil",
 
-        "imageUrl": "./srcs/images/beaches/copacabana.jpg",
+        "imageUrl": "./images/beaches/copacabana.jpg",
 
         "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
 
