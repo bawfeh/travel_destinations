@@ -185,6 +185,10 @@ div {
   .contact-form {
       padding-left: 2%;
   }
+  .introduction a {
+    color: white;
+    font-weight: bold;
+  }
   
 
   button {
